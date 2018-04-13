@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, CQHUDMode) {
 @implementation CQHUD
 
 - (UIWindow *)window {
-  if (_window) {
+  if (!_window) {
     _window = [UIApplication sharedApplication].keyWindow;
   }
   return _window;
@@ -73,7 +73,7 @@ RCT_EXPORT_METHOD(showSpinIndeterminateWithTitle:(NSString *)title) {
   
 }
 
-RCT_EXPORT_METHOD(showSpinIndeterminateWithTitle:(NSString *)title content:(NSString *)content) {
+RCT_EXPORT_METHOD(showSpinIndeterminateWithTitleAndContent:(NSString *)title content:(NSString *)content) {
   dispatch_async(dispatch_get_main_queue(), ^{
     if(self.hud){
       [self.hud hideAnimated:YES];
