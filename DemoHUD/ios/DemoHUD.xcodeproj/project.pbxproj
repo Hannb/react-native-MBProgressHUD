@@ -40,6 +40,8 @@
 		A5152F1F20805C22007301A5 /* MBProgressHUD+CQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F1E20805C22007301A5 /* MBProgressHUD+CQ.m */; };
 		A5152F4D20806244007301A5 /* MBProgressHUD+CQExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F4B20806244007301A5 /* MBProgressHUD+CQExtend.m */; };
 		A5152F5120808BED007301A5 /* CQHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F5020808BED007301A5 /* CQHUD.m */; };
+		A5152F542080B331007301A5 /* CQProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F532080B331007301A5 /* CQProgressHUD.m */; };
+		A5152F572080B4AB007301A5 /* CQProgressHUDModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F562080B4AB007301A5 /* CQProgressHUDModule.m */; };
 		A545CA6C207B62C70080D35D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A545CA6A207B62C70080D35D /* MBProgressHUD.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
@@ -353,6 +355,10 @@
 		A5152F4C20806244007301A5 /* MBProgressHUD_CQExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD_CQExtend.h; sourceTree = "<group>"; };
 		A5152F4F20808BED007301A5 /* CQHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQHUD.h; sourceTree = "<group>"; };
 		A5152F5020808BED007301A5 /* CQHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQHUD.m; sourceTree = "<group>"; };
+		A5152F522080B331007301A5 /* CQProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQProgressHUD.h; sourceTree = "<group>"; };
+		A5152F532080B331007301A5 /* CQProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQProgressHUD.m; sourceTree = "<group>"; };
+		A5152F552080B4AB007301A5 /* CQProgressHUDModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQProgressHUDModule.h; sourceTree = "<group>"; };
+		A5152F562080B4AB007301A5 /* CQProgressHUDModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQProgressHUDModule.m; sourceTree = "<group>"; };
 		A545CA6A207B62C70080D35D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A545CA6B207B62C70080D35D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -621,6 +627,8 @@
 			children = (
 				A5152F4F20808BED007301A5 /* CQHUD.h */,
 				A5152F5020808BED007301A5 /* CQHUD.m */,
+				A5152F552080B4AB007301A5 /* CQProgressHUDModule.h */,
+				A5152F562080B4AB007301A5 /* CQProgressHUDModule.m */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -645,6 +653,8 @@
 				A545CA6A207B62C70080D35D /* MBProgressHUD.m */,
 				A5152F1D20805C22007301A5 /* MBProgressHUD+CQ.h */,
 				A5152F1E20805C22007301A5 /* MBProgressHUD+CQ.m */,
+				A5152F522080B331007301A5 /* CQProgressHUD.h */,
+				A5152F532080B331007301A5 /* CQProgressHUD.m */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -1168,12 +1178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5152F572080B4AB007301A5 /* CQProgressHUDModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				A5152F1F20805C22007301A5 /* MBProgressHUD+CQ.m in Sources */,
 				A5152F4D20806244007301A5 /* MBProgressHUD+CQExtend.m in Sources */,
 				A5152F5120808BED007301A5 /* CQHUD.m in Sources */,
 				A545CA6C207B62C70080D35D /* MBProgressHUD.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				A5152F542080B331007301A5 /* CQProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

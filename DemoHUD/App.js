@@ -12,9 +12,8 @@ import {
     View
 } from 'react-native';
 
-// var CQHUD = require('react-native').NativeModules.CQHUD;
-
-import ProgressHUD from "./src/ProgressHUD"
+import ProgressHUD from "./src/ProgressHUD";
+import HUD from "./src/HUD";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -60,7 +59,7 @@ export default class App extends Component<Props> {
                     2. show text.
                 </Text>
                 <Text style={styles.instructions} onPress={() => {
-                    ProgressHUD.showSpinIndeterminate()
+                    ProgressHUD.showSpinIndeterminate();
                     var interval = setInterval(function () {
                         ProgressHUD.dismiss()
                         clearInterval(interval);
@@ -69,13 +68,31 @@ export default class App extends Component<Props> {
                     3. show spin indeterminate.
                 </Text>
                 <Text style={styles.instructions} onPress={() => {
-                    ProgressHUD.showSpinIndeterminate('loading')
+                    ProgressHUD.showSpinIndeterminate('loading');
                     var interval = setInterval(function () {
                         ProgressHUD.dismiss()
                         clearInterval(interval);
                     }, 3000);
                 }}>
                     4. show loading with title.
+                </Text>
+                <Text style={styles.instructions} onPress={() => {
+                    HUD.showLoadingHUD();
+                    var interval = setInterval(function () {
+                        HUD.hideLoadingHUD();
+                        clearInterval(interval);
+                    }, 4000);
+                }}>
+                    (1). show loading.
+                </Text>
+                <Text style={styles.instructions} onPress={() => {
+                    HUD.showErrorHUDWith('error message...');
+                    var interval = setInterval(function () {
+                        HUD.hideLoadingHUD();
+                        clearInterval(interval);
+                    }, 3000);
+                }}>
+                    (2). show error.
                 </Text>
                 <Text style={styles.instructions}>
                     {instructions}
