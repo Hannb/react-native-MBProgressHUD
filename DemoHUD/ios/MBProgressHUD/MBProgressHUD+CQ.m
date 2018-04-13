@@ -1,9 +1,8 @@
 //
 //  MBProgressHUD+CQ.m
-//  DemoHUD
 //
-//  Created by Hannb Ma on 4/13/18.
-//  Copyright © 2018 Facebook. All rights reserved.
+//  Created by Hannb Ma on 4/13/17.
+//  Copyright © 2018 CQ. All rights reserved.
 //
 
 #import "MBProgressHUD+CQ.h"

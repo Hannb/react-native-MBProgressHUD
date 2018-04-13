@@ -39,6 +39,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A5152F1F20805C22007301A5 /* MBProgressHUD+CQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F1E20805C22007301A5 /* MBProgressHUD+CQ.m */; };
 		A5152F4D20806244007301A5 /* MBProgressHUD+CQExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F4B20806244007301A5 /* MBProgressHUD+CQExtend.m */; };
+		A5152F5120808BED007301A5 /* CQHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A5152F5020808BED007301A5 /* CQHUD.m */; };
 		A545CA6C207B62C70080D35D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A545CA6A207B62C70080D35D /* MBProgressHUD.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
@@ -350,6 +351,8 @@
 		A5152F4A20806244007301A5 /* MBProgressHUD+CQExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CQExtend.h"; sourceTree = "<group>"; };
 		A5152F4B20806244007301A5 /* MBProgressHUD+CQExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CQExtend.m"; sourceTree = "<group>"; };
 		A5152F4C20806244007301A5 /* MBProgressHUD_CQExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD_CQExtend.h; sourceTree = "<group>"; };
+		A5152F4F20808BED007301A5 /* CQHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQHUD.h; sourceTree = "<group>"; };
+		A5152F5020808BED007301A5 /* CQHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQHUD.m; sourceTree = "<group>"; };
 		A545CA6A207B62C70080D35D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A545CA6B207B62C70080D35D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -613,6 +616,15 @@
 			path = CQExtend;
 			sourceTree = "<group>";
 		};
+		A5152F4E20808AF3007301A5 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				A5152F4F20808BED007301A5 /* CQHUD.h */,
+				A5152F5020808BED007301A5 /* CQHUD.m */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		A545CA42207B62670080D35D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +639,7 @@
 		A545CA69207B62880080D35D /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				A5152F4E20808AF3007301A5 /* Bridge */,
 				A5152F4520805FCE007301A5 /* CQExtend */,
 				A545CA6B207B62C70080D35D /* MBProgressHUD.h */,
 				A545CA6A207B62C70080D35D /* MBProgressHUD.m */,
@@ -1158,6 +1171,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				A5152F1F20805C22007301A5 /* MBProgressHUD+CQ.m in Sources */,
 				A5152F4D20806244007301A5 /* MBProgressHUD+CQExtend.m in Sources */,
+				A5152F5120808BED007301A5 /* CQHUD.m in Sources */,
 				A545CA6C207B62C70080D35D /* MBProgressHUD.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
