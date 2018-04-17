@@ -1,5 +1,6 @@
 package com.demohud.MyToast;
 
+import android.annotation.SuppressLint;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
@@ -68,6 +69,6 @@ public class ToastModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void showText(String message) {
-        Toast.makeText(getReactApplicationContext(), message, 2).show();
+        Toast.makeText(getReactApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 }
