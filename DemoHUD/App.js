@@ -15,6 +15,7 @@ import {
 
 import ProgressHUD from "./src/ProgressHUD";
 import HUD from "./src/HUD";
+import MyToast from "./src/MyToast"
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -48,6 +49,13 @@ export default class App extends Component<Props> {
     _toast() {
         NativeModules.ToastModule.show('toast text view...', NativeModules.ToastModule.SHORT, (success) => {
             // alert(success)
+        }, (error) => {
+            alert(error)
+        })
+    }
+
+    _test() {
+        MyToast.show('toast test...', NativeModules.ToastModule.SHORT, (success) => {
         }, (error) => {
             alert(error)
         })
@@ -108,6 +116,9 @@ export default class App extends Component<Props> {
                 </Text>
                 <Text onPress={this._toast} style={styles.welcome}>
                     toast view...
+                </Text>
+                <Text onPress={()=>MyToast.showText('xxxxxx')} style={styles.instructions}>
+                    toast test.
                 </Text>
             </View>
         );

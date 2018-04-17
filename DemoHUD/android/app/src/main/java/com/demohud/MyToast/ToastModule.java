@@ -11,7 +11,6 @@ import com.facebook.react.bridge.ReactMethod;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * Created by hannb on 4/17/18.
  */
@@ -56,7 +55,7 @@ public class ToastModule extends ReactContextBaseJavaModule {
      * @param duration 时长
      */
     @ReactMethod
-    public void show(String message, int duration, Callback success,Callback error) {
+    public void show(String message, int duration, Callback success, Callback error) {
         try {
 
             Toast.makeText(getReactApplicationContext(), message, duration).show();
@@ -65,5 +64,10 @@ public class ToastModule extends ReactContextBaseJavaModule {
         catch (Exception e){
             error.invoke("error");
         }
+    }
+
+    @ReactMethod
+    public void showText(String message) {
+        Toast.makeText(getReactApplicationContext(), message, 2).show();
     }
 }
