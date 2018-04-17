@@ -9,7 +9,8 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    NativeModules
 } from 'react-native';
 
 import ProgressHUD from "./src/ProgressHUD";
@@ -42,6 +43,14 @@ export default class App extends Component<Props> {
             }
             progress += 0.1;
         }, 1000);
+    }
+
+    _toast() {
+        NativeModules.ToastModule.show('toast text view...', NativeModules.ToastModule.SHORT, (success) => {
+            // alert(success)
+        }, (error) => {
+            alert(error)
+        })
     }
 
     render() {
@@ -96,6 +105,9 @@ export default class App extends Component<Props> {
                 </Text>
                 <Text style={styles.instructions}>
                     {instructions}
+                </Text>
+                <Text onPress={this._toast} style={styles.welcome}>
+                    toast view...
                 </Text>
             </View>
         );
